@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landing Page</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/banner-ad.css">
 </head>
 <body>
 
@@ -30,6 +31,33 @@
       <h1>Build something people love.</h1>
       <p>A simple, fast landing page you can customise in minutes.</p>
       <a class="button" href="#contact">Get started</a>
+    </section>
+
+    <!--
+      ICAEW Benefits+ partner banner ad. A standalone copy lives in
+      banner-ad/index.html for previewing and exporting a static image;
+      keep the two in sync.
+    -->
+    <section class="promo" aria-labelledby="icaew-offer-heading">
+      <h2 id="icaew-offer-heading" class="visually-hidden">ICAEW member offer</h2>
+      <aside class="ad" id="icaew-banner" aria-label="ICAEW member offer">
+        <div class="ad__card">
+          <div class="ad__brand">
+            <!-- Replace with <img src="images/your-logo.png" alt="Your company"> -->
+            Your logo
+          </div>
+          <img class="ad__partner" src="images/icaew-benefits-partner.png" alt="ICAEW Benefits+ Partner">
+          <div class="ad__copy">
+            <div class="ad__text">
+              <p class="ad__headline">Do you capture every call?</p>
+              <p class="ad__offer"><strong>Get 20% off*</strong> your first 3 months' invoices as an ICAEW member</p>
+            </div>
+            <a class="ad__cta" href="#contact">Find out more</a>
+          </div>
+          <div class="ad__photo" role="img" aria-label="Business owner smiling while taking a call at her desk"></div>
+        </div>
+        <p class="ad__terms">*Offer available to all ICAEW members taking out a new service. 20% discount applies to your first three months' invoices; standard pricing applies thereafter. Terms and conditions apply.</p>
+      </aside>
     </section>
 
     <section class="features" id="features">
