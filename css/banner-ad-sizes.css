@@ -1,0 +1,245 @@
+/*
+ * Fixed-size ad units for the Posh Virtual Receptionists x ICAEW Benefits+
+ * banner. Each .unit is an exact pixel size with no outer frame, so the
+ * exported PNG is the ad itself:
+ *
+ *   .unit--leaderboard   728 x 90
+ *   .unit--mobile        620 x 349
+ *
+ * Shares the POSH palette with banner-ad.css.
+ */
+
+.unit {
+  --navy: #23394c;
+  --green: #6fc097;
+  --mint: #a0e395;
+  --white: #ffffff;
+
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: grid;
+  background: var(--navy);
+  color: var(--white);
+  font-family: "P22 Mackinac Pro", "P22 Mackinac Pro Book", Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+}
+
+.unit *,
+.unit *::before,
+.unit *::after {
+  box-sizing: border-box;
+}
+
+.unit p {
+  margin: 0;
+}
+
+.unit__logo {
+  display: block;
+  height: auto;
+}
+
+.unit__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.unit__brand-line {
+  font-size: 7.5px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--green);
+  white-space: nowrap;
+}
+
+.unit__headline {
+  font-weight: 800;
+}
+
+.unit__offer {
+  font-weight: 700;
+}
+
+.unit__offer strong {
+  color: var(--green);
+  font-weight: 800;
+}
+
+.unit__sub {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.unit__cta {
+  display: inline-block;
+  background: var(--green);
+  color: var(--navy);
+  border-radius: 3px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.unit__photo {
+  background-color: #3b5470;
+  background-image: url("../images/banner-photo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.unit__terms {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+}
+
+/* ---------------------------------------------------------------- */
+/* Leaderboard 728 x 90                                              */
+/* ---------------------------------------------------------------- */
+
+.unit--leaderboard {
+  width: 728px;
+  height: 90px;
+  grid-template-columns: auto auto 1fr auto 132px;
+  align-items: center;
+  gap: 0 10px;
+  padding-left: 12px;
+}
+
+.unit--leaderboard .unit__brand {
+  gap: 4px;
+  padding-right: 12px;
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.unit--leaderboard .unit__brand .unit__logo {
+  width: 64px;
+}
+
+.unit--leaderboard .unit__brand-line {
+  font-size: 6.5px;
+  letter-spacing: 0.14em;
+}
+
+.unit--leaderboard .unit__partner {
+  width: 66px;
+}
+
+.unit--leaderboard .unit__text {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.unit--leaderboard .unit__headline {
+  font-size: 14px;
+}
+
+.unit--leaderboard .unit__offer {
+  font-size: 12.5px;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.unit--leaderboard .unit__terms {
+  font-size: 7px;
+  white-space: nowrap;
+  margin-top: 1px;
+}
+
+.unit--leaderboard .unit__cta {
+  font-size: 10.5px;
+  padding: 7px 9px;
+}
+
+.unit--leaderboard .unit__photo {
+  align-self: stretch;
+  background-image:
+    linear-gradient(90deg, var(--navy) 0%, rgba(35, 57, 76, 0) 40%),
+    url("../images/banner-photo.jpg");
+  background-size: 190% auto;
+  background-position: 68% 8%;
+}
+
+/* ---------------------------------------------------------------- */
+/* Mobile 620 x 349                                                  */
+/* ---------------------------------------------------------------- */
+
+.unit--mobile {
+  width: 620px;
+  height: 349px;
+  grid-template-columns: 1fr 240px;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    "body  photo"
+    "terms photo";
+}
+
+.unit--mobile .unit__body {
+  grid-area: body;
+  display: grid;
+  align-content: center;
+  gap: 14px;
+  padding: 26px 8px 18px 28px;
+  min-width: 0;
+}
+
+.unit--mobile .unit__logos {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.unit--mobile .unit__brand {
+  padding-right: 16px;
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.unit--mobile .unit__brand .unit__logo {
+  width: 112px;
+}
+
+.unit--mobile .unit__partner {
+  width: 108px;
+}
+
+.unit--mobile .unit__text {
+  display: grid;
+  gap: 5px;
+}
+
+.unit--mobile .unit__headline {
+  font-size: 23px;
+}
+
+.unit--mobile .unit__offer {
+  font-size: 17px;
+}
+
+.unit--mobile .unit__sub {
+  font-size: 15px;
+}
+
+.unit--mobile .unit__cta {
+  justify-self: start;
+  font-size: 14px;
+  padding: 10px 18px;
+}
+
+.unit--mobile .unit__photo {
+  grid-area: photo;
+  background-image:
+    linear-gradient(90deg, var(--navy) 0%, rgba(35, 57, 76, 0) 40%),
+    url("../images/banner-photo.jpg");
+  background-position: 62% 30%;
+}
+
+.unit--mobile .unit__terms {
+  grid-area: terms;
+  font-size: 8.5px;
+  line-height: 1.35;
+  padding: 0 8px 12px 28px;
+}

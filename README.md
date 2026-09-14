@@ -31,7 +31,16 @@ It uses the POSH brand palette (Dark Navy `#23394C`, Brand Green `#6FC097`, Mint
 - The photo is loaded from `images/banner-photo.jpg`, currently the headset portrait from the POSH template. `images/banner-photo-office.jpg` is the earlier office shot if you want to switch back.
 - The ICAEW logo (`images/icaew-benefits-partner.png`) is the approved RGB artwork supplied by ICAEW. Do not recolour or re-draw it.
 
-To export static PNGs (in `banner-ad/export/`) for sending to ICAEW or using in email:
+Fixed-size ad units live in `banner-ad/sizes.html` with their own styles in `css/banner-ad-sizes.css`:
+
+| Unit | Size | Export |
+|------|------|--------|
+| Leaderboard | 728 x 90 | `banner-728x90.png` (and `@2x`) |
+| Mobile | 620 x 349 | `banner-620x349.png` (and `@2x`) |
+
+The 1x files are the exact pixel sizes ad networks ask for; the `@2x` files are the same units rendered at double resolution for retina placements.
+
+To export all PNGs (in `banner-ad/export/`) for sending to ICAEW or using in email:
 
 ```sh
 npm install playwright   # once
