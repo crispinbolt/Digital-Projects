@@ -106,6 +106,23 @@
   line-height: 1.2;
 }
 
+/* Free-trial tag, sits after the headline text */
+.ad__tag {
+  display: inline-block;
+  vertical-align: 0.15em;
+  margin-left: 6px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--ad-green);
+  color: var(--ad-navy);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
 .ad__offer {
   margin: 0;
   font-size: clamp(0.9rem, 1.4vw, 1.05rem);
