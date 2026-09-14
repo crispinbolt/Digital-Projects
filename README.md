@@ -28,7 +28,7 @@ It uses the POSH brand palette (Dark Navy `#23394C`, Brand Green `#6FC097`, Mint
 - Markup lives in `index.html` (the `.ad` element) and, as a standalone copy for previewing and exporting, in `banner-ad/index.html`. Keep the two in sync.
 - Styles are in `css/banner-ad.css`; colours are the `--ad-*` variables at the top.
 - The POSH logo is `images/posh-logo-white.png` (white letters, green dot, for dark backgrounds); `images/posh-logo.png` is the navy version for light backgrounds.
-- The photo is loaded from `images/banner-photo.jpg`. The current file is the portrait crop from the POSH brand kit; replace it with the full-resolution original for a sharper export.
+- The photo is loaded from `images/banner-photo.jpg`, currently the headset portrait from the POSH template. `images/banner-photo-office.jpg` is the earlier office shot if you want to switch back.
 - The ICAEW logo (`images/icaew-benefits-partner.png`) is the approved RGB artwork supplied by ICAEW. Do not recolour or re-draw it.
 
 To export static PNGs (in `banner-ad/export/`) for sending to ICAEW or using in email:
