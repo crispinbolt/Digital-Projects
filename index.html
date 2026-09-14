@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Announcement banner: edit the text and link below to change the message. -->
+  <div class="banner" id="announcement-banner" role="region" aria-label="Announcement" data-banner-id="launch-2026">
+    <p class="banner__text">
+      <strong>New:</strong> We just launched. Check out what's new.
+      <a class="banner__link" href="#features">Learn more</a>
+    </p>
+    <button class="banner__close" type="button" aria-label="Dismiss announcement">&times;</button>
+  </div>
+
+  <header class="site-header">
+    <a class="logo" href="#">Landing Page</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Build something people love.</h1>
+      <p>A simple, fast landing page you can customise in minutes.</p>
+      <a class="button" href="#contact">Get started</a>
+    </section>
+
+    <section class="features" id="features">
+      <h2>Features</h2>
+      <div class="features__grid">
+        <article class="feature">
+          <h3>Fast</h3>
+          <p>No frameworks, no build step. Plain HTML, CSS and JavaScript.</p>
+        </article>
+        <article class="feature">
+          <h3>Responsive</h3>
+          <p>Looks good on phones, tablets and desktops out of the box.</p>
+        </article>
+        <article class="feature">
+          <h3>Easy to edit</h3>
+          <p>Change the copy, colours and banner message directly in the source.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Get in touch</h2>
+      <p>Email <a href="mailto:hello@example.com">hello@example.com</a> and we'll get back to you.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Landing Page. All rights reserved.</p>
+  </footer>
+
+  <script src="js/banner.js"></script>
+</body>
+</html>
