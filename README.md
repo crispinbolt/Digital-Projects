@@ -21,12 +21,14 @@ Then open http://localhost:8000.
 
 ## ICAEW Benefits+ banner ad
 
-An ICAEW Benefits+ partner banner (20% off the first three months' invoices for ICAEW members) sits below the hero. It follows the standard ICAEW partner-banner format: partner logo, ICAEW Benefits+ Partner mark, headline and offer, call to action, photo, and small print.
+A Posh Virtual Receptionists banner for the ICAEW Benefits+ programme (20% off the first three months' invoices for ICAEW members) sits below the hero. It follows the standard ICAEW partner-banner format: POSH logo, ICAEW Benefits+ Partner mark, headline and offer, call to action, photo, and small print.
+
+It uses the POSH brand palette (Dark Navy `#23394C`, Brand Green `#6FC097`, Mint `#A0E395`) and the P22 Mackinac Pro brand face with Arial as the fallback, so exported images rendered on a machine without the brand font will show Arial.
 
 - Markup lives in `index.html` (the `.ad` element) and, as a standalone copy for previewing and exporting, in `banner-ad/index.html`. Keep the two in sync.
 - Styles are in `css/banner-ad.css`; colours are the `--ad-*` variables at the top.
-- Put your company logo in place of the "Your logo" text inside `.ad__brand`.
-- The photo is loaded from `images/banner-photo.jpg` (a landscape image with the subject on the right works best). Until it exists, a plain blue block is shown.
+- The POSH logo is `images/posh-logo-white.png` (white letters, green dot, for dark backgrounds); `images/posh-logo.png` is the navy version for light backgrounds.
+- The photo is loaded from `images/banner-photo.jpg`. The current file is the portrait crop from the POSH brand kit; replace it with the full-resolution original for a sharper export.
 - The ICAEW logo (`images/icaew-benefits-partner.png`) is the approved RGB artwork supplied by ICAEW. Do not recolour or re-draw it.
 
 To export static PNGs (in `banner-ad/export/`) for sending to ICAEW or using in email:

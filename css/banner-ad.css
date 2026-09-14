@@ -10,17 +10,21 @@
  */
 
 .ad {
-  --ad-navy: #0b2d5b;
-  --ad-navy-dark: #071f40;
+  /* POSH brand palette */
+  --ad-navy: #23394c;        /* Dark Navy */
+  --ad-green: #6fc097;       /* Brand Green */
+  --ad-mint: #a0e395;        /* Mint */
+  --ad-amber: #fbae40;       /* Warm Amber (sparingly) */
   --ad-white: #ffffff;
-  --ad-accent: #ffd200;
-  --ad-cta: #1e7bd6;
-  --ad-cta-hover: #1666b4;
-  --ad-frame: #e9f0f8;
+  --ad-accent: var(--ad-green);
+  --ad-cta: var(--ad-green);
+  --ad-cta-hover: var(--ad-mint);
+  --ad-frame: #eef6f1;
 
   max-width: 1200px;
   margin: 0 auto;
-  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+  /* P22 Mackinac Pro is the POSH brand face; Arial is the brand fallback. */
+  font-family: "P22 Mackinac Pro", "P22 Mackinac Pro Book", Arial, Helvetica, sans-serif;
   color: var(--ad-white);
   background: var(--ad-frame);
   padding: 12px;
@@ -40,28 +44,33 @@
   overflow: hidden;
 }
 
-/* Partner logo (replace the text with an <img> of your own logo). */
+/* POSH logo (white letters, green dot) with the service line beneath. */
 .ad__brand {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-width: 118px;
-  height: 78px;
-  padding: 0 14px;
-  background: var(--ad-white);
-  color: var(--ad-navy);
-  border-radius: 4px;
-  font-weight: 800;
-  font-size: 1.15rem;
-  letter-spacing: 0.02em;
-  text-align: center;
-  line-height: 1.15;
+  gap: 8px;
+  min-width: 150px;
+  padding-right: 24px;
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+  color: var(--ad-white);
 }
 
-.ad__brand img {
-  max-width: 100%;
-  max-height: 100%;
+.ad__brand-logo {
+  width: 130px;
+  height: auto;
   display: block;
+}
+
+.ad__brand-line {
+  margin: 0;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ad-green);
+  white-space: nowrap;
 }
 
 .ad__partner {
@@ -115,7 +124,7 @@
   flex: 0 0 auto;
   padding: 10px 18px;
   background: var(--ad-cta);
-  color: var(--ad-white);
+  color: var(--ad-navy);
   border-radius: 4px;
   font-weight: 700;
   font-size: 0.95rem;
@@ -138,12 +147,12 @@
 .ad__photo {
   align-self: stretch;
   min-height: 150px;
-  background-color: #1b4a86;
+  background-color: #3b5470;
   background-image:
-    linear-gradient(90deg, var(--ad-navy) 0%, rgba(11, 45, 91, 0) 45%),
+    linear-gradient(90deg, var(--ad-navy) 0%, rgba(35, 57, 76, 0) 55%),
     url("../images/banner-photo.jpg");
   background-size: cover;
-  background-position: center 30%;
+  background-position: center 6%;
   background-repeat: no-repeat;
 }
 
@@ -152,6 +161,10 @@
   font-size: 0.7rem;
   line-height: 1.35;
   color: var(--ad-navy);
+}
+
+.ad__terms a {
+  color: inherit;
 }
 
 /* Narrow screens: stack photo above the copy. */
@@ -171,15 +184,19 @@
     min-height: 140px;
     margin: 0 -16px;
     background-image:
-      linear-gradient(0deg, var(--ad-navy) 0%, rgba(11, 45, 91, 0) 40%),
+      linear-gradient(0deg, var(--ad-navy) 0%, rgba(35, 57, 76, 0) 40%),
       url("../images/banner-photo.jpg");
-    background-position: center 20%;
+    background-position: center 12%;
   }
 
   .ad__brand {
     grid-area: brand;
-    height: 64px;
-    min-width: 100px;
+    min-width: 0;
+    padding-right: 16px;
+  }
+
+  .ad__brand-logo {
+    width: 110px;
   }
 
   .ad__partner {
