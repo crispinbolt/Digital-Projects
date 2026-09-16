@@ -12,6 +12,10 @@ The banner at the top of the page is defined in `index.html` inside the element 
 - Two colour schemes are available. The default is dark; adding the `banner--light` class to the banner element (as `index.html` does) gives a white background with a green accent bar, link and close button.
 - Dark colours are controlled by the `--color-banner-bg` and `--color-banner-text` variables in `css/styles.css`; the white variant uses the `--color-banner-light-*` variables.
 
+## Hero image
+
+The hero section shows a photo next to the headline. Save the image as `images/hero.jpg` (landscape, around 2000px wide) and update the `alt` text on the `<img>` in `index.html` if the photo changes. On narrow screens the photo stacks above the headline.
+
 ## Local preview
 
 ```sh
