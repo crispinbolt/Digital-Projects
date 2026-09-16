@@ -6,6 +6,10 @@
   --color-primary-dark: #1d4ed8;
   --color-banner-bg: #1e293b;
   --color-banner-text: #f8fafc;
+  --color-banner-light-bg: #ffffff;
+  --color-banner-light-text: #14532d;
+  --color-banner-light-accent: #16a34a;
+  --color-banner-light-accent-dark: #15803d;
   --max-width: 1080px;
 }
 
@@ -74,6 +78,38 @@ a {
   background: rgba(255, 255, 255, 0.15);
   outline: 2px solid var(--color-banner-text);
   outline-offset: 1px;
+}
+
+/* White banner variant: add the banner--light class to the banner element. */
+.banner--light {
+  background: var(--color-banner-light-bg);
+  color: var(--color-banner-light-text);
+  border-top: 4px solid var(--color-banner-light-accent);
+  border-bottom: 1px solid #dcfce7;
+}
+
+.banner--light strong {
+  color: var(--color-banner-light-accent-dark);
+}
+
+.banner--light .banner__link {
+  color: var(--color-banner-light-accent-dark);
+  text-decoration-color: var(--color-banner-light-accent);
+  text-decoration-thickness: 2px;
+}
+
+.banner--light .banner__link:hover {
+  color: var(--color-banner-light-accent);
+}
+
+.banner--light .banner__close {
+  color: var(--color-banner-light-accent-dark);
+}
+
+.banner--light .banner__close:hover,
+.banner--light .banner__close:focus-visible {
+  background: #dcfce7;
+  outline-color: var(--color-banner-light-accent);
 }
 
 /* Header */
