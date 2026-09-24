@@ -14,7 +14,7 @@ The banner at the top of the page is defined in `index.html` inside the element 
 
 ## Hero image
 
-The hero section shows a photo next to the headline. Save the image as `images/hero.jpg` (landscape, around 2000px wide) and update the `alt` text on the `<img>` in `index.html` if the photo changes. On narrow screens the photo stacks above the headline.
+The hero section shows a photo next to the headline. The photo lives at `images/hero.jpg`; replace that file (landscape works best) and update the `alt` text on the `<img>` in `index.html` if the photo changes. On narrow screens the photo stacks above the headline.
 
 ## Local preview
 
