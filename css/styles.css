@@ -183,6 +183,25 @@ a {
   background: var(--color-primary-dark);
 }
 
+/* Promo banner ad wrapper */
+.promo {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem 1rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* Features */
 .features,
 .contact {

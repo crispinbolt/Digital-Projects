@@ -23,3 +23,31 @@ python3 -m http.server 8000
 ```
 
 Then open http://localhost:8000.
+
+## ICAEW Benefits+ banner ad (white variant)
+
+A Posh Virtual Receptionists banner for the ICAEW Benefits+ programme (20% off the first three months' invoices for ICAEW members) sits below the hero. It follows the standard ICAEW partner-banner format: POSH logo, ICAEW Benefits+ Partner mark, headline and offer, call to action, photo, and small print.
+
+This is the white version of the banner on the `Banner-Ad` branch: a white card inside a Brand Green frame, with a green edge band, tag and call to action, and the offer picked out in a deeper green (`#25784F`) that stays readable on white. The rest of the POSH palette (Dark Navy `#23394C`, Brand Green `#6FC097`, Mint `#A0E395`) and the P22 Mackinac Pro brand face with Arial fallback are unchanged, so exported images rendered on a machine without the brand font will show Arial.
+
+- Markup lives in `index.html` (the `.ad` element) and, as a standalone copy for previewing and exporting, in `banner-ad/index.html`. Keep the two in sync.
+- Styles are in `css/banner-ad.css`; colours are the `--ad-*` variables at the top.
+- The POSH logo is `images/posh-logo.png` (navy letters, green dot, for light backgrounds); `images/posh-logo-white.png` is the white version if the ad is ever placed on a dark panel again.
+- The ICAEW logo (`images/icaew-benefits-partner.png`) is the approved white RGB artwork supplied by ICAEW. It is not recoloured; on the white card it sits on a small navy tile so it stays legible.
+- The photo is loaded from `images/banner-photo.jpg`, currently the same woman-on-phone shot used in the hero. Replace that file to change it (landscape, subject on the right works best).
+
+Fixed-size ad units live in `banner-ad/sizes.html` with their own styles in `css/banner-ad-sizes.css`:
+
+| Unit | Size | Export |
+|------|------|--------|
+| Leaderboard | 728 x 90 | `banner-728x90.png` (and `@2x`) |
+| Mobile | 620 x 349 | `banner-620x349.png` (and `@2x`) |
+
+The 1x files are the exact pixel sizes ad networks ask for; the `@2x` files are the same units rendered at double resolution for retina placements. The responsive banner is also exported at 1200 x 200 and at a 400px mobile width.
+
+To export all PNGs (in `banner-ad/export/`) for sending to ICAEW or using in email:
+
+```sh
+npm install playwright   # once
+node banner-ad/export.js
+```

@@ -1,0 +1,261 @@
+/*
+ * ICAEW Benefits+ partner banner ad, white variant.
+ *
+ * Layout mirrors the ICAEW partner-banner format: partner logo, ICAEW
+ * Benefits+ Partner mark, headline + offer, call to action, photo on the
+ * right, and a line of small print underneath.
+ *
+ * This version sits on a white card with the POSH green turned up: a green
+ * frame and edge band, green tag and call to action, and the offer picked
+ * out in a deeper green that stays legible on white. The ICAEW mark is the
+ * approved white artwork, so it sits on a small navy tile rather than being
+ * recoloured.
+ *
+ * Intrinsic size is 1200 x 200 (6:1). The ad scales fluidly below that and
+ * stacks on narrow screens.
+ */
+
+.ad {
+  /* POSH brand palette */
+  --ad-navy: #23394c;        /* Dark Navy */
+  --ad-green: #6fc097;       /* Brand Green: fills, with navy text on top */
+  --ad-green-deep: #25784f;  /* Deeper green for text on white (5.4:1) */
+  --ad-mint: #a0e395;        /* Mint */
+  --ad-mint-tint: #e4f4ea;   /* Pale mint for the frame */
+  --ad-amber: #fbae40;       /* Warm Amber (sparingly) */
+  --ad-white: #ffffff;
+  --ad-accent: var(--ad-green-deep);
+  --ad-cta: var(--ad-green);
+  --ad-cta-hover: var(--ad-mint);
+  --ad-frame: var(--ad-green);
+
+  max-width: 1200px;
+  margin: 0 auto;
+  /* P22 Mackinac Pro is the POSH brand face; Arial is the brand fallback. */
+  font-family: "P22 Mackinac Pro", "P22 Mackinac Pro Book", Arial, Helvetica, sans-serif;
+  color: var(--ad-navy);
+  background: var(--ad-frame);
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.ad__card {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto 1fr minmax(210px, 22%);
+  align-items: center;
+  gap: 0 20px;
+  min-height: 150px;
+  padding: 16px 0 16px 20px;
+  background: var(--ad-white);
+  border-left: 8px solid var(--ad-green);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* POSH logo (navy letters, green dot) with the service line beneath. */
+.ad__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding-right: 20px;
+  border-right: 1px solid rgba(35, 57, 76, 0.2);
+  color: var(--ad-navy);
+}
+
+.ad__brand-logo {
+  width: 118px;
+  height: auto;
+  display: block;
+}
+
+.ad__brand-line {
+  margin: 0;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ad-green-deep);
+  white-space: nowrap;
+}
+
+/* Navy tile so the approved white ICAEW artwork reads on the white card. */
+.ad__partner-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px;
+  background: var(--ad-navy);
+  border-radius: 4px;
+}
+
+.ad__partner {
+  width: 112px;
+  height: auto;
+  display: block;
+}
+
+.ad__copy {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+}
+
+.ad__text {
+  flex: 1 1 300px;
+}
+
+@media (min-width: 900px) {
+  .ad__copy {
+    flex-wrap: nowrap;
+  }
+
+  .ad__text {
+    flex: 1 1 auto;
+  }
+}
+
+.ad__headline {
+  margin: 0 0 6px;
+  font-size: clamp(1rem, 1.7vw, 1.3rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--ad-navy);
+}
+
+/* Free-trial tag, sits after the headline text */
+.ad__tag {
+  display: inline-block;
+  vertical-align: 0.15em;
+  margin-left: 6px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--ad-green);
+  color: var(--ad-navy);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.ad__offer {
+  margin: 0;
+  font-size: clamp(0.9rem, 1.4vw, 1.05rem);
+  font-weight: 700;
+  line-height: 1.3;
+  text-wrap: balance;
+}
+
+.ad__offer strong {
+  color: var(--ad-accent);
+  font-weight: 800;
+}
+
+.ad__offer-sub {
+  margin: 2px 0 0;
+  font-size: clamp(0.85rem, 1.3vw, 0.95rem);
+  font-weight: 400;
+  line-height: 1.3;
+  color: rgba(35, 57, 76, 0.8);
+}
+
+.ad__cta {
+  display: inline-block;
+  flex: 0 0 auto;
+  padding: 10px 16px;
+  background: var(--ad-cta);
+  color: var(--ad-navy);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.ad__cta:hover,
+.ad__cta:focus-visible {
+  background: var(--ad-cta-hover);
+  outline: 2px solid var(--ad-navy);
+  outline-offset: 2px;
+}
+
+/*
+ * Photo. Drop your image in at images/banner-photo.jpg (landscape, subject
+ * on the right works best). The gradient fades the white card into the
+ * photo; if the image is missing you get a pale green block instead.
+ */
+.ad__photo {
+  align-self: stretch;
+  min-height: 150px;
+  background-color: var(--ad-mint-tint);
+  background-image:
+    linear-gradient(90deg, var(--ad-white) 0%, rgba(255, 255, 255, 0) 45%),
+    url("../images/banner-photo.jpg");
+  background-size: cover;
+  background-position: 80% 12%;
+  background-repeat: no-repeat;
+}
+
+.ad__terms {
+  margin: 10px 4px 0;
+  font-size: 0.7rem;
+  line-height: 1.35;
+  color: var(--ad-navy);
+}
+
+.ad__terms a {
+  color: inherit;
+}
+
+/* Narrow screens: stack photo above the copy. */
+@media (max-width: 720px) {
+  .ad__card {
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "photo photo"
+      "brand partner"
+      "copy  copy";
+    gap: 14px 16px;
+    padding: 0 16px 16px;
+    border-left: 0;
+    border-top: 8px solid var(--ad-green);
+  }
+
+  .ad__photo {
+    grid-area: photo;
+    min-height: 140px;
+    margin: 0 -16px;
+    background-image:
+      linear-gradient(0deg, var(--ad-white) 0%, rgba(255, 255, 255, 0) 40%),
+      url("../images/banner-photo.jpg");
+    background-position: 70% 20%;
+  }
+
+  .ad__brand {
+    grid-area: brand;
+    min-width: 0;
+    padding-right: 16px;
+  }
+
+  .ad__brand-logo {
+    width: 104px;
+  }
+
+  .ad__partner-tile {
+    grid-area: partner;
+    justify-self: start;
+  }
+
+  .ad__partner {
+    width: 108px;
+  }
+
+  .ad__copy {
+    grid-area: copy;
+  }
+}

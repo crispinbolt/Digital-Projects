@@ -1,0 +1,293 @@
+/*
+ * Fixed-size ad units for the Posh Virtual Receptionists x ICAEW Benefits+
+ * banner, white variant. Each .unit is an exact pixel size with no outer
+ * frame, so the exported PNG is the ad itself:
+ *
+ *   .unit--leaderboard   728 x 90
+ *   .unit--mobile        620 x 349
+ *
+ * Shares the POSH palette and white-card treatment with banner-ad.css.
+ */
+
+.unit {
+  --navy: #23394c;
+  --green: #6fc097;
+  --green-deep: #25784f;
+  --mint: #a0e395;
+  --mint-tint: #e4f4ea;
+  --white: #ffffff;
+
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: grid;
+  background: var(--white);
+  color: var(--navy);
+  font-family: "P22 Mackinac Pro", "P22 Mackinac Pro Book", Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+}
+
+.unit *,
+.unit *::before,
+.unit *::after {
+  box-sizing: border-box;
+}
+
+.unit p {
+  margin: 0;
+}
+
+.unit__logo {
+  display: block;
+  height: auto;
+}
+
+.unit__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.unit__brand-line {
+  font-size: 7.5px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--green-deep);
+  white-space: nowrap;
+}
+
+/* Navy tile so the approved white ICAEW artwork reads on white. */
+.unit__partner-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--navy);
+  border-radius: 3px;
+}
+
+.unit__headline {
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.unit__tag {
+  display: inline-block;
+  vertical-align: 0.15em;
+  border-radius: 999px;
+  background: var(--green);
+  color: var(--navy);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.unit__offer {
+  font-weight: 700;
+}
+
+.unit__offer strong {
+  color: var(--green-deep);
+  font-weight: 800;
+}
+
+.unit__sub {
+  font-weight: 400;
+  color: rgba(35, 57, 76, 0.8);
+}
+
+.unit__cta {
+  display: inline-block;
+  background: var(--green);
+  color: var(--navy);
+  border-radius: 3px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.unit__photo {
+  background-color: var(--mint-tint);
+  background-image: url("../images/banner-photo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.unit__terms {
+  color: rgba(35, 57, 76, 0.75);
+  font-weight: 400;
+}
+
+/* ---------------------------------------------------------------- */
+/* Leaderboard 728 x 90                                              */
+/* ---------------------------------------------------------------- */
+
+.unit--leaderboard {
+  width: 728px;
+  height: 90px;
+  grid-template-columns: auto auto 1fr auto 132px;
+  align-items: center;
+  gap: 0 10px;
+  padding-left: 12px;
+  border-left: 6px solid var(--green);
+}
+
+.unit--leaderboard .unit__brand {
+  gap: 4px;
+  padding-right: 12px;
+  border-right: 1px solid rgba(35, 57, 76, 0.2);
+}
+
+.unit--leaderboard .unit__brand .unit__logo {
+  width: 64px;
+}
+
+.unit--leaderboard .unit__brand-line {
+  font-size: 6.5px;
+  letter-spacing: 0.14em;
+}
+
+.unit--leaderboard .unit__partner-tile {
+  padding: 5px 7px;
+}
+
+.unit--leaderboard .unit__partner {
+  width: 60px;
+}
+
+.unit--leaderboard .unit__text {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.unit--leaderboard .unit__headline {
+  font-size: 14px;
+}
+
+.unit--leaderboard .unit__tag {
+  margin-left: 4px;
+  padding: 2px 6px;
+  font-size: 7px;
+}
+
+.unit--leaderboard .unit__offer {
+  font-size: 12.5px;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.unit--leaderboard .unit__terms {
+  font-size: 7px;
+  white-space: nowrap;
+  margin-top: 1px;
+}
+
+.unit--leaderboard .unit__cta {
+  font-size: 10.5px;
+  padding: 7px 9px;
+}
+
+.unit--leaderboard .unit__photo {
+  align-self: stretch;
+  background-image:
+    linear-gradient(90deg, var(--white) 0%, rgba(255, 255, 255, 0) 40%),
+    url("../images/banner-photo.jpg");
+  background-size: 190% auto;
+  background-position: 78% 6%;
+}
+
+/* ---------------------------------------------------------------- */
+/* Mobile 620 x 349                                                  */
+/* ---------------------------------------------------------------- */
+
+.unit--mobile {
+  width: 620px;
+  height: 349px;
+  grid-template-columns: 1fr 240px;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    "body  photo"
+    "terms photo";
+  border-top: 8px solid var(--green);
+}
+
+.unit--mobile .unit__body {
+  grid-area: body;
+  display: grid;
+  align-content: center;
+  gap: 14px;
+  padding: 22px 8px 18px 28px;
+  min-width: 0;
+}
+
+.unit--mobile .unit__logos {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.unit--mobile .unit__brand {
+  padding-right: 16px;
+  border-right: 1px solid rgba(35, 57, 76, 0.2);
+}
+
+.unit--mobile .unit__brand .unit__logo {
+  width: 112px;
+}
+
+.unit--mobile .unit__partner-tile {
+  padding: 7px 9px;
+}
+
+.unit--mobile .unit__partner {
+  width: 96px;
+}
+
+.unit--mobile .unit__text {
+  display: grid;
+  gap: 5px;
+}
+
+.unit--mobile .unit__headline {
+  font-size: 23px;
+}
+
+.unit--mobile .unit__tag {
+  margin-left: 6px;
+  padding: 3px 8px;
+  font-size: 10px;
+}
+
+.unit--mobile .unit__offer {
+  font-size: 17px;
+}
+
+.unit--mobile .unit__sub {
+  font-size: 15px;
+}
+
+.unit--mobile .unit__cta {
+  justify-self: start;
+  font-size: 14px;
+  padding: 10px 18px;
+}
+
+.unit--mobile .unit__photo {
+  grid-area: photo;
+  background-image:
+    linear-gradient(90deg, var(--white) 0%, rgba(255, 255, 255, 0) 40%),
+    url("../images/banner-photo.jpg");
+  background-size: cover;
+  background-position: 78% 20%;
+}
+
+.unit--mobile .unit__terms {
+  grid-area: terms;
+  font-size: 8.5px;
+  line-height: 1.35;
+  padding: 0 8px 12px 28px;
+}
