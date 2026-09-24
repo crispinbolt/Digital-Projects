@@ -157,16 +157,14 @@
 
 /*
  * Photo. Drop your image in at images/banner-photo.jpg (landscape, subject
- * on the right works best). The gradient fades the white card into the
- * photo; if the image is missing you get a pale green block instead.
+ * on the right works best). It is shown sharp with a hard edge; if the
+ * image is missing you get a pale green block instead.
  */
 .ad__photo {
   align-self: stretch;
   min-height: 150px;
   background-color: var(--ad-mint-tint);
-  background-image:
-    linear-gradient(90deg, var(--ad-white) 0%, rgba(255, 255, 255, 0) 45%),
-    url("../images/banner-photo.jpg");
+  background-image: url("../images/banner-photo.jpg");
   background-size: cover;
   background-position: 80% 12%;
   background-repeat: no-repeat;
@@ -188,9 +186,7 @@
     grid-area: photo;
     min-height: 140px;
     margin: 0 -16px;
-    background-image:
-      linear-gradient(0deg, var(--ad-white) 0%, rgba(255, 255, 255, 0) 40%),
-      url("../images/banner-photo.jpg");
+    background-image: url("../images/banner-photo.jpg");
     background-position: 70% 20%;
   }
 
