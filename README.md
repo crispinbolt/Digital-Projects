@@ -26,9 +26,9 @@ Then open http://localhost:8000.
 
 ## ICAEW Benefits+ banner ad (white variant)
 
-A Posh Virtual Receptionists banner for the ICAEW Benefits+ programme (20% off the first three months' invoices for ICAEW members) sits below the hero. It follows the standard ICAEW partner-banner format: POSH logo, ICAEW Benefits+ Partner mark, headline and offer, call to action, photo, and small print.
+A Posh Virtual Receptionists banner for the ICAEW Benefits+ programme (20% off the first three months' invoices for ICAEW members) sits below the hero. It follows the ICAEW partner-banner format, pared back to the essentials: POSH logo, ICAEW Benefits+ Partner mark, the headline, two offer pills (7-day free trial, 20% off), a call to action, and the photo.
 
-This is the white version of the banner on the `Banner-Ad` branch: a white card inside a Brand Green frame, with a green edge band, tag and call to action, and the offer picked out in a deeper green (`#25784F`) that stays readable on white. The rest of the POSH palette (Dark Navy `#23394C`, Brand Green `#6FC097`, Mint `#A0E395`) and the P22 Mackinac Pro brand face with Arial fallback are unchanged, so exported images rendered on a machine without the brand font will show Arial.
+This is the white version of the banner on the `Banner-Ad` branch: a white card inside a Brand Green frame, with a green edge band and call to action, the free-trial pill in Brand Green and the 20% off pill in a deeper green (`#25784F`) that stays readable on white. The rest of the POSH palette (Dark Navy `#23394C`, Brand Green `#6FC097`, Mint `#A0E395`) and the P22 Mackinac Pro brand face with Arial fallback are unchanged, so exported images rendered on a machine without the brand font will show Arial.
 
 - Markup lives in `index.html` (the `.ad` element) and, as a standalone copy for previewing and exporting, in `banner-ad/index.html`. Keep the two in sync.
 - Styles are in `css/banner-ad.css`; colours are the `--ad-*` variables at the top.

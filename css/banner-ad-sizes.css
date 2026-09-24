@@ -72,31 +72,26 @@
   color: var(--navy);
 }
 
-.unit__tag {
+.unit__offers {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.unit__pill {
   display: inline-block;
-  vertical-align: 0.15em;
   border-radius: 999px;
   background: var(--green);
   color: var(--navy);
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-weight: 800;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   line-height: 1.2;
   white-space: nowrap;
 }
 
-.unit__offer {
-  font-weight: 700;
-}
-
-.unit__offer strong {
-  color: var(--green-deep);
-  font-weight: 800;
-}
-
-.unit__sub {
-  font-weight: 400;
-  color: rgba(35, 57, 76, 0.8);
+.unit__pill--deep {
+  background: var(--green-deep);
+  color: var(--white);
 }
 
 .unit__cta {
@@ -114,11 +109,6 @@
   background-image: url("../images/banner-photo.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.unit__terms {
-  color: rgba(35, 57, 76, 0.75);
-  font-weight: 400;
 }
 
 /* ---------------------------------------------------------------- */
@@ -165,25 +155,20 @@
 }
 
 .unit--leaderboard .unit__headline {
-  font-size: 14px;
+  font-size: 15px;
 }
 
-.unit--leaderboard .unit__tag {
-  margin-left: 4px;
-  padding: 2px 6px;
-  font-size: 7px;
+.unit--leaderboard .unit__text {
+  gap: 5px;
 }
 
-.unit--leaderboard .unit__offer {
-  font-size: 12.5px;
-  letter-spacing: -0.01em;
-  white-space: nowrap;
+.unit--leaderboard .unit__offers {
+  gap: 6px;
 }
 
-.unit--leaderboard .unit__terms {
-  font-size: 7px;
-  white-space: nowrap;
-  margin-top: 1px;
+.unit--leaderboard .unit__pill {
+  padding: 3px 9px;
+  font-size: 9px;
 }
 
 .unit--leaderboard .unit__cta {
@@ -208,10 +193,7 @@
   width: 620px;
   height: 349px;
   grid-template-columns: 1fr 240px;
-  grid-template-rows: 1fr auto;
-  grid-template-areas:
-    "body  photo"
-    "terms photo";
+  grid-template-areas: "body photo";
   border-top: 8px solid var(--green);
 }
 
@@ -220,7 +202,7 @@
   display: grid;
   align-content: center;
   gap: 14px;
-  padding: 22px 8px 18px 28px;
+  padding: 22px 8px 22px 28px;
   min-width: 0;
 }
 
@@ -253,21 +235,20 @@
 }
 
 .unit--mobile .unit__headline {
-  font-size: 23px;
+  font-size: 25px;
 }
 
-.unit--mobile .unit__tag {
-  margin-left: 6px;
-  padding: 3px 8px;
-  font-size: 10px;
+.unit--mobile .unit__text {
+  gap: 10px;
 }
 
-.unit--mobile .unit__offer {
-  font-size: 17px;
+.unit--mobile .unit__offers {
+  gap: 8px;
 }
 
-.unit--mobile .unit__sub {
-  font-size: 15px;
+.unit--mobile .unit__pill {
+  padding: 6px 13px;
+  font-size: 12px;
 }
 
 .unit--mobile .unit__cta {
@@ -285,9 +266,3 @@
   background-position: 78% 20%;
 }
 
-.unit--mobile .unit__terms {
-  grid-area: terms;
-  font-size: 8.5px;
-  line-height: 1.35;
-  padding: 0 8px 12px 28px;
-}
