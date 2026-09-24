@@ -6,8 +6,8 @@
  * right.
  *
  * This version sits on a white card with the POSH green turned up: a green
- * frame and edge band, and the two offers as green pills next to a green
- * call to action. The ICAEW mark is the
+ * frame, the offer as a single line of deep green type, and a green call
+ * to action. The ICAEW mark is the
  * approved white artwork, so it sits on a small navy tile rather than being
  * recoloured.
  *
@@ -48,7 +48,6 @@
   min-height: 150px;
   padding: 16px 0 16px 20px;
   background: var(--ad-white);
-  border-left: 8px solid var(--ad-green);
   border-radius: 4px;
   overflow: hidden;
 }
@@ -119,38 +118,21 @@
 }
 
 .ad__headline {
-  margin: 0 0 10px;
+  margin: 0 0 6px;
   font-size: clamp(1.1rem, 2vw, 1.5rem);
   font-weight: 800;
   line-height: 1.2;
   color: var(--ad-navy);
 }
 
-/* The two offer pills: free trial, then the discount. */
-.ad__offers {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+/* Offer line, one seamless statement in the deeper green. */
+.ad__offer {
   margin: 0;
-}
-
-.ad__pill {
-  display: inline-block;
-  padding: 6px 14px;
-  border-radius: 999px;
-  background: var(--ad-green);
-  color: var(--ad-navy);
-  font-size: clamp(0.8rem, 1.2vw, 0.95rem);
+  font-size: clamp(1rem, 1.7vw, 1.3rem);
   font-weight: 800;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
   line-height: 1.2;
-  white-space: nowrap;
-}
-
-.ad__pill--deep {
-  background: var(--ad-green-deep);
-  color: var(--ad-white);
+  color: var(--ad-green-deep);
+  text-wrap: balance;
 }
 
 .ad__cta {
@@ -200,8 +182,6 @@
       "copy  copy";
     gap: 14px 16px;
     padding: 0 16px 16px;
-    border-left: 0;
-    border-top: 8px solid var(--ad-green);
   }
 
   .ad__photo {
